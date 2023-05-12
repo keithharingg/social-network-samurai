@@ -1,0 +1,33 @@
+.navbarContainer {
+    max-width: inherit;
+    background-color: #24292e; 
+    color: #fff; 
+    position: fixed;
+  }
+  
+  .navbarList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbarItem {
+    margin-right: 16px;
+  }
+  
+  .navbarLink {
+    display: block;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbarLink:hover {
+    background-color: #eab909; 
+  }
+  
+  .activeLink {
+    background-color: #0366d6; 
+  }
+  

@@ -1,0 +1,44 @@
+/* Header.module.css */
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16 px;
+    background-color: #24292e; /* Example background color */
+    color: #fff; /* Example text color */
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40 px;
+    height: 40 px;
+    margin-right: 8 px;
+  }
+  
+  .logoName {
+    font-size: 24 px;
+    font-weight: bold;
+  }
+  
+  .loginContainer {
+    display: flex;
+  }
+  
+  .loginButton {
+    padding: 10 px 16 px;
+    background-color: #0366d6; /* Example background color */
+    color: #fff; /* Example text color */
+    border: none;
+    cursor: pointer;
+    font-size: 16 px;
+    font-weight: bold;
+  }
+  
+  .loginButton:hover {
+    background-color: #0356c7; /* Example hover background color */
+  }
+  

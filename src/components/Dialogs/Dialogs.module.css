@@ -1,0 +1,29 @@
+/* styles.css (or any other suitable file name) */
+
+.dialogs {
+    display: flex;
+    background-color: #ffedcc; /* Smooth yellow color */
+  }
+  
+  .dialogsItems {
+    flex: 1;
+    padding: 16 px;
+  }
+  
+  .messages {
+    flex: 2;
+    padding: 16 px;
+  }
+  
+  /* Example styling for DialogItem and Message components */
+  .dialogItem {
+    /* Add styles for DialogItem component here */
+  }
+  
+  .message {
+    /* Add styles for Message component here */
+  }
+  
+  .active {
+    background-color: #eab909;
+  }
