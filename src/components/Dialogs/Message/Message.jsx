@@ -1,5 +1,6 @@
 import React from 'react';
 import s from '../Dialogs.module.css';
+import dialogsReducer from '../../redux/dialogs-reducer';
 
 const Message = (props) => {
   let message = props.message;

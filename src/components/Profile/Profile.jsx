@@ -1,16 +1,18 @@
 import React from 'react';
 import s from './Profile.module.css';
-import MyPosts from '../MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
+import MyPostsContainer from '../MyPosts/MyPostsContainer';
 
 const Profile = (props) => {
-
   return (
     <div className={s.profileWrapper}>
-      <ProfileInfo />
-      <MyPosts posts={props.profilePage.posts}
-      newPostText={props.profilePage.newPostText}
-      dispatch={props.dispatch} />
+      <ProfileInfo
+        profile={props.profile}
+        status={props.status}
+        updateStatus={props.updateStatus}
+      />{' '}
+      {/* props without "this", cause it's not a class component */}
+      <MyPostsContainer store={props.store} />
     </div>
   );
 };
