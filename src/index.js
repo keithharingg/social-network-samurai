@@ -2,23 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import state from './components/redux/state';
-import {addPost} from './components/redux/state';
+import store from './components/redux/state';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
+window.state = store;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Router>
-    <React.StrictMode>
-      <App state={state} addPost={addPost} />
-    </React.StrictMode>
-  </Router>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let rerenderEntireTree = () => { 
+  root.render(
+    <Router>
+      <React.StrictMode>
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />
+      </React.StrictMode>
+    </Router>
+  );
+};
+
+rerenderEntireTree(store.getState());
+
+store.subscribe(rerenderEntireTree)
