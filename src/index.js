@@ -9,7 +9,7 @@ import store from './components/redux/redux-store';
 window.state = store
 const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <React.StrictMode>
        <Provider store={store}>
         <App />
